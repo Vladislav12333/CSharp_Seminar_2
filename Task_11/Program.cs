@@ -4,19 +4,18 @@
 //12 ->2
 //85 ->8
 
-int randomNumber = new Random().Next(10, 100); // [10, 100) [-обозначает что входит в деапазон, )-обозначает что не входит в деапазон.
+Random rand = new Random();
+
+int randomNumber = rand.Next(10, 100);
 System.Console.WriteLine(randomNumber);
 
-int leftNumber = randomNumber / 10;
-int rightNumber = randomNumber % 10;
-
-if (leftNumber > rightNumber)
+if (randomNumber / 10 > randomNumber % 10)
 {
-    System.Console.WriteLine($"Левое число больше -> {leftNumber}");
+    System.Console.WriteLine($"Левое число больше -> {randomNumber / 10}");
 }
-else if (rightNumber > leftNumber)
+else if (randomNumber % 10 > randomNumber / 10)
 {
-    System.Console.WriteLine($"Правое число больше -> {rightNumber}");
+    System.Console.WriteLine($"Правое число больше -> {randomNumber % 10}");
 }
 else
 {
