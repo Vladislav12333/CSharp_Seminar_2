@@ -5,18 +5,16 @@
 // 8, 9 -> нет
 
 Console.Write("Введите первое число: ");
-int a = int.Parse(Console.ReadLine());
+int numberA = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите второе число: ");
-int b = int.Parse(Console.ReadLine());
+int numberB = Convert.ToInt32(Console.ReadLine());
 
-if (a * a == b || b * b == a)
+if (numberA * numberA == numberB || numberB * numberB == numberA)
 {
-    Console.WriteLine("Одно число является квадратом другого.");
+    Console.WriteLine("да");
 }
 else
 {
-    Console.WriteLine("Числа не связаны отношением квадрата.");
+    Console.WriteLine("нет");
 }
-
-Console.ReadKey();
