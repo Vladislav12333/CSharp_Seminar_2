@@ -3,16 +3,14 @@
 //46 -> нет
 //161 -> да
 
-Console.Write("Введите число: ");
-int num = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
-if (num % 7 == 0 && num % 23 == 0)
+if (number % 7 == 0 && number % 23 == 0)
 {
-    Console.WriteLine(num + " кратно 7 и 23");
+    Console.WriteLine($"{number} -> да");
 }
 else
 {
-    Console.WriteLine(num + " не кратно 7 и 23");
+    Console.WriteLine($"{number} -> нет");
 }
-
-Console.ReadKey();
